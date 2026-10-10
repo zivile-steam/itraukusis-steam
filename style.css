@@ -453,3 +453,52 @@ const pirmoProfilioDuomenys = [
 #garsoIrasas[hidden] {
     display: none;
 }
+.skiltiesPavadinimas {
+    text-align: center;
+    color: #399C63;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    margin: 35px 0 12px;
+}
+
+.pereitiIVeik {
+    text-align: center;
+    margin: 35px auto 55px;
+}
+
+.veikMygtukas {
+    display: inline-block;
+    background: #399C63;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 14px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 700;
+    transition: background 0.2s ease;
+}
+
+.veikMygtukas:hover {
+    background: #287A4C;
+}
+.pereitiIVeik {
+    text-align: center;
+    margin: 35px auto 55px;
+}
+
+.veikMygtukas {
+    display: inline-block;
+    background: #399C63;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 14px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 700;
+    transition: background 0.2s ease;
+}
+
+.veikMygtukas:hover {
+    background: #287A4C;
+}
