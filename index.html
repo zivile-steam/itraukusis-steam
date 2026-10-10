@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+    <title>Įtraukusis STEAM</title>
+</head>
+<body>
+    <h1>
+            Įtraukusis STEAM: keturi mokytojų profiliai
+            ir jų patirtys
+        </h1>
+
+        <h2>Išgirsk mokytojų patirtį.</h2>
+
+        <p>
+            Pasirinkite vieną iš keturių mokytojų profilių
+            ir išgirskite jo patirtis keturiose
+            įtraukiojo pedagogo dimensijose.
+        </p>
+    </header>
+    <main>
+    <select id="profilis" required>
+    <option value="" disabled selected hidden>
+        Pasirinkite mokytojo profilį
+    </option>
+    <option value="1">Žemas STEAM – žema įtrauktis</option>
+    <option value="2">Žemas STEAM – aukšta įtrauktis</option>
+    <option value="3">Aukštas STEAM – žema įtrauktis</option>
+    <option value="4">Aukštas STEAM – aukšta įtrauktis</option>
+</select>
+<div id="dimensijos" hidden>
+
+    <button type="button">
+        <i data-lucide="users"></i>
+        <span>Įvairovės vertinimas</span>
+    </button>
+
+    <button type="button">
+        <i data-lucide="hand-heart"></i>
+        <span>Visų besimokančiųjų rėmimas</span>
+    </button>
+
+    <button type="button">
+        <i data-lucide="handshake"></i>
+        <span>Bendradarbiavimas</span>
+    </button>
+
+    <button type="button">
+        <i data-lucide="graduation-cap"></i>
+        <span>Profesinis tobulėjimas</span>
+    </button>
+
+</div>
+<!-- Išplėstas dimensijos vaizdas -->
+<section id="isplestasVaizdas" hidden>
+
+    <div class="profilioJuosta">
+        <span>Pasirinktas profilis:</span>
+        <strong id="pasirinktasProfilis"></strong>
+
+        <button id="uzdarytiVaizda" type="button"
+                aria-label="Uždaryti">
+            ×
+        </button>
+    </div>
+
+    <div class="turinioIsdestymas">
+
+        <!-- Šoninė dimensijų navigacija -->
+        <nav id="sonineNavigacija"
+             aria-label="Dimensijų pasirinkimas">
+        </nav>
+
+        <!-- Pasirinktos dimensijos turinys -->
+        <article class="dimensijosTurinys">
+            <h2 id="dimensijosPavadinimas"></h2>
+
+           <div class="izvalgosAntraste">
+    <i data-lucide="chart-no-axes-column-increasing"></i>
+    <h3>Tyrimo įžvalga</h3>
+</div>
+
+<p id="tyrimoIzvalga"></p>
+
+<div class="citatosLaukas">
+    <span class="kabutes">“</span>
+    <blockquote id="mokytojoCitata"></blockquote>
+</div>
+
+<div id="garsoIrasas" class="garsoLaukas">
+    <i data-lucide="volume-2"></i>
+
+    <div class="garsoTurinys">
+        <audio controls preload="none">
+            <source src="1profilisįvair.m4a" type="audio/mp4">
+            Jūsų naršyklė nepalaiko garso atkūrimo.
+        </audio>
+
+        <small class="garsoPastaba">
+            Mokytojo interviu ištrauka. Įgarsino tyrimo autorė.
+        </small>
+    </div>
+</div>
+        </article>
+
+    </div>
+
+</section>
+</main>
+<script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

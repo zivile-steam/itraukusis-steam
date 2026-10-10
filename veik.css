@@ -1,0 +1,407 @@
+
+/* VEIK puslapio pagrindas */
+
+.veikPuslapis {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 35px 20px 70px;
+    color: #34385B;
+}
+
+.veikAntraste {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.veikAntraste h1 {
+    color: #399C63;
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.veikAntraste h2 {
+    font-size: 25px;
+    margin-bottom: 18px;
+}
+
+.veikAntraste p {
+    max-width: 720px;
+    margin: 0 auto;
+    line-height: 1.7;
+    font-size: 17px;
+}
+
+/* Pasiūlymo forma */
+
+.idejosForma {
+    max-width: 760px;
+    margin: 0 auto 55px;
+    padding: 30px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(52, 56, 91, 0.07);
+}
+
+.idejosForma h3 {
+    font-size: 17px;
+    margin: 25px 0 15px;
+    color: #34385B;
+}
+
+.idejosForma h3:first-child {
+    margin-top: 0;
+}
+
+#veikProfilis,
+#veikPasiulymas {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px;
+    border: 1px solid #D9DBE8;
+    border-radius: 12px;
+    background: #F8F9FC;
+    color: #34385B;
+    font: inherit;
+}
+
+#veikPasiulymas {
+    resize: vertical;
+    min-height: 115px;
+}
+
+/* Keturios dimensijų kortelės */
+
+.veikDimensijos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.veikDimensija {
+    min-height: 105px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600;
+    text-align: center;
+    color: #34385B;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.veikDimensija:hover {
+    transform: translateY(-3px);
+}
+
+.veikDimensija svg {
+    width: 27px;
+    height: 27px;
+}
+
+.veikDimensija.zalia {
+    background: #E5F3EB;
+    --korteles-spalva: #399C63;
+}
+
+.veikDimensija.melyna {
+    background: #E6F0FA;
+    --korteles-spalva: #377FC3;
+}
+
+.veikDimensija.geltona {
+    background: #FFF3D9;
+    --korteles-spalva: #D2A027;
+}
+
+.veikDimensija.raudona {
+    background: #FBEAE8;
+    --korteles-spalva: #CC6760;
+}
+
+.veikDimensija svg {
+    color: var(--korteles-spalva);
+}
+
+.veikDimensija.pasirinkta {
+    border-color: var(--korteles-spalva);
+    box-shadow: 0 0 0 2px rgba(52, 56, 91, 0.06);
+}
+
+/* Pasiūlymo pateikimo mygtukas */
+
+#priklijuotiIdeja {
+    width: 100%;
+    margin-top: 22px;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    border-radius: 12px;
+    background: #34385B;
+    color: white;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#priklijuotiIdeja:hover {
+    background: #464B77;
+}
+
+/* Bendros idėjų sienos pagrindas */
+
+.idejuSiena {
+    padding: 30px;
+    border-radius: 22px;
+    background: #F4F1E9;
+}
+
+.idejuSiena > h2,
+.idejuSiena > p {
+    text-align: center;
+}
+
+.idejuSiena > h2 {
+    margin-bottom: 8px;
+}
+
+.idejuSiena > p {
+    margin-bottom: 25px;
+    color: #777D91;
+}
+
+/* Telefonams */
+
+@media (max-width: 600px) {
+    .veikPuslapis {
+        padding: 20px 12px 40px;
+    }
+
+    .veikAntraste h1 {
+        font-size: 30px;
+    }
+
+    .veikAntraste h2 {
+        font-size: 21px;
+    }
+
+    .veikAntraste p {
+        font-size: 15px;
+    }
+
+    .idejosForma,
+    .idejuSiena {
+        padding: 18px;
+    }
+
+    .veikDimensijos {
+        gap: 9px;
+    }
+
+    .veikDimensija {
+        min-height: 110px;
+        padding: 10px;
+        font-size: 13px;
+    }
+}
+
+
+/* Penkios pasiūlymų lentos zonos */
+
+.profiliuTinklelis {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.profilioZona {
+    min-height: 190px;
+    padding: 20px;
+    background: #FFFFFF;
+    border: 1px solid #D9DBE8;
+    border-radius: 16px;
+}
+
+.profilioZona h3 {
+    margin: 0 0 18px;
+    font-size: 17px;
+    text-align: center;
+    color: #34385B;
+}
+
+.sistemosZona {
+    grid-column: 1 / -1;
+    min-height: 220px;
+    background: #FFFFFF;
+}
+
+
+.profilioIdejos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr));
+    gap: 14px;
+    align-content: start;
+}
+
+.pasiulymoKortele {
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 145px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.pasiulymoKortele p {
+    flex-grow: 1;
+}
+
+@media (min-width: 700px) {
+    .profilioIdejos {
+        grid-template-columns: repeat(auto-fill, 230px);
+    }
+}
+
+@media (max-width: 600px) {
+    .profiliuTinklelis {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .profilioZona {
+        min-height: 140px;
+        padding: 16px;
+    }
+
+    .sistemosZona {
+        grid-column: auto;
+        min-height: 170px;
+    }
+}
+
+/* Priklijuotos pasiūlymų kortelės */
+
+.pasiulymoKortele {
+    padding: 16px;
+    border-radius: 12px;
+    color: #34385B;
+    box-shadow: 0 3px 10px rgba(52, 56, 91, 0.08);
+    overflow-wrap: anywhere;
+}
+
+.pasiulymoKortele strong {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.pasiulymoKortele p {
+    margin: 0 0 14px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.pasiulymoKortele small {
+    display: block;
+    font-size: 11px;
+    color: #666B83;
+    border-top: 1px solid rgba(52, 56, 91, 0.15);
+    padding-top: 9px;
+}
+
+/* Filtrų lygiavimas */
+
+.lentosFiltrai {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    align-items: end;
+}
+
+.filtroGrupe {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    min-width: 0;
+}
+
+.filtroGrupe label {
+    display: block;
+    text-align: left;
+    margin: 0;
+}
+
+.filtroGrupe select {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .lentosFiltrai {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Galutinis filtrų išdėstymas */
+
+.idejuSiena .lentosFiltrai {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    align-items: stretch;
+    background: #FFFFFF;
+    padding: 22px;
+    border-radius: 16px;
+    margin: 20px 0 28px;
+}
+
+.idejuSiena .filtroGrupe {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 9px;
+    min-width: 0;
+}
+
+.idejuSiena .filtroGrupe label {
+    display: block;
+    width: 100%;
+    margin: 0;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.idejuSiena .filtroGrupe select {
+    display: block;
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 14px;
+    border: 1px solid #D9DBE8;
+    border-radius: 11px;
+    background: #F8F9FC;
+    font: inherit;
+    color: #34385B;
+}
+
+@media (max-width: 600px) {
+    .idejuSiena .lentosFiltrai {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 16px;
+    }
+}

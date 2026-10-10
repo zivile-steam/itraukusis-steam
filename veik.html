@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veik – įtraukusis STEAM</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="veik.css">
+
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.468.0/dist/umd/lucide.min.js"></script></head>
+
+<body>
+    <main class="veikPuslapis">
+
+        <header class="veikAntraste">
+            <h1>VEIK</h1>
+
+            <p>
+                Ką, jūsų nuomone, reikėtų tobulinti
+                mokykloje ar sistemoje, kad STEAM veiklos
+                būtų labiau įtraukios visiems mokiniams?
+            </p>
+        </header>
+
+        <section class="idejosForma">
+            <h3>1. Kam skirtas jūsų pasiūlymas?</h3>
+
+            <select id="veikProfilis">
+                <option value="">Pasirinkite</option>
+                <option value="1">Žemas STEAM – žema įtrauktis</option>
+                <option value="2">Žemas STEAM – aukšta įtrauktis</option>
+                <option value="3">Aukštas STEAM – žema įtrauktis</option>
+                <option value="4">Aukštas STEAM – aukšta įtrauktis</option>
+                <option value="5">Švietimo sistemai</option>
+            </select>
+
+            <h3>2. Kurią sritį siūlote tobulinti?</h3>
+
+            <div class="veikDimensijos">
+                <button type="button" class="veikDimensija zalia" data-dimensija="ivairove">
+                    <i data-lucide="users"></i>
+                    <span>Įvairovės vertinimas</span>
+                </button>
+
+                <button type="button" class="veikDimensija melyna" data-dimensija="remimas">
+                    <i data-lucide="hand-heart"></i>
+                    <span>Visų besimokančiųjų rėmimas</span>
+                </button>
+
+                <button type="button" class="veikDimensija geltona" data-dimensija="bendradarbiavimas">
+                    <i data-lucide="handshake"></i>
+                    <span>Bendradarbiavimas</span>
+                </button>
+
+                <button type="button" class="veikDimensija raudona" data-dimensija="tobulejimas">
+                    <i data-lucide="graduation-cap"></i>
+                    <span>Profesinis tobulėjimas</span>
+                </button>
+            </div>
+
+            <h3>3. Parašykite savo pasiūlymą</h3>
+
+            <textarea id="veikPasiulymas"
+                placeholder="Manau, kad reikėtų..."
+                rows="4"></textarea>
+
+            <button type="button" id="priklijuotiIdeja">
+                <i data-lucide="pin"></i>
+                Priklijuoti idėją
+            </button>
+        </section>
+
+        
+<section class="idejuSiena">
+
+    <h2>Pasiūlymų lenta</h2>
+
+    <div class="lentosFiltrai">
+
+        <div class="filtroGrupe">
+            <label for="filtrasProfilis">Mokytojo profilis</label>
+
+            <select id="filtrasProfilis">
+                <option value="visi">Visi profiliai</option>
+                <option value="1">Žemas STEAM – žema įtrauktis</option>
+                <option value="2">Žemas STEAM – aukšta įtrauktis</option>
+                <option value="3">Aukštas STEAM – žema įtrauktis</option>
+                <option value="4">Aukštas STEAM – aukšta įtrauktis</option>
+                <option value="5">Švietimo sistemai</option>
+            </select>
+        </div>
+
+        <div class="filtroGrupe">
+            <label for="filtrasDimensija">Dimensija</label>
+
+            <select id="filtrasDimensija">
+                <option value="visos">Visos dimensijos</option>
+                <option value="ivairove">Įvairovės vertinimas</option>
+                <option value="remimas">Visų besimokančiųjų rėmimas</option>
+                <option value="bendradarbiavimas">Bendradarbiavimas</option>
+                <option value="tobulejimas">Profesinis tobulėjimas</option>
+            </select>
+        </div>
+
+    </div>
+
+    <div id="idejuLentosTurinys"></div>
+
+</section>
+
+
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+    <script type="module" src="firebase.js"></script>
+<script type="module" src="veik.js"></script></body>
+</html>
