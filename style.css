@@ -502,3 +502,34 @@ const pirmoProfilioDuomenys = [
 .veikMygtukas:hover {
     background: #287A4C;
 }
+/* TELEFONO EKRANO PRITAIKYMAS */
+@media (max-width: 768px) {
+
+    .turinioIsdestymas {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+    }
+
+    #sonineNavigacija {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .soninisMygtukas {
+        min-width: 0;
+        min-height: 85px;
+        padding: 12px 8px;
+    }
+
+    .dimensijosTurinys {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        padding: 18px;
+    }
+
+    .dimensijosTurinys p {
+        overflow-wrap: break-word;
+    }
+}
