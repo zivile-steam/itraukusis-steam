@@ -337,13 +337,6 @@ select option {
     overflow-wrap: normal;
     word-break: normal;
 }
-// Pirmasis profilis: Žemas STEAM – žema įtrauktis
-const pirmoProfilioDuomenys = [
-    {
-        izvalga: "Mokinių įvairovę suvokia kaip kliūtį. Veiklas individualizuoja tik iškilus sunkumams, nenuosekliai, todėl pamokos eiga išlieka nepastovi.",
-        citata: "„planuoji vieną dalyką, o pamatai, kad daliai vaikų per sudėtinga, tada tenka vietoj koreguoti.“ (M6)"
-    }
-];
 /* Tyrimo įžvalgos antraštė */
 .izvalgosAntraste {
     display: flex;
